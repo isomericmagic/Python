@@ -1,15 +1,17 @@
 """
-Let us pretend that all of the remaining cast members of the comedy group,  Monty Python, are going to get together and do a question and answer session.  
-They're gonna be discussing what it's like for them as a comedy group, to have jokes that they made over three decades ago still referenced in Python tutorials 
-and code examples. Now, let's also imagine, since they're funny like this, that they want to have the only way that you can buy tickets, is through a single python script. 
-No website, no app. Just a single console app. You can only buy tickets using a command line program where no one would expect it. Spain, in a cheese shop. 
-You've been tasked with writing that program. Sound fun? There are some very specific instructions and I've gone and captured them for us in Trello.  
+Let us pretend that all of the remaining cast members of the comedy group,  Monty Python, are going to get together and do
+a question and answer session. They're gonna be discussing what it's like for them as a comedy group, to have jokes that 
+they made over three decades ago still referenced in Python tutorials and code examples. Now, let's also imagine, since 
+they're funny like this, that they want to have the only way that you can buy tickets, is through a single python script. 
+No website, no app. Just a single console app. You can only buy tickets using a command line program where no one would 
+expect it. Spain, in a cheese shop. You've been tasked with writing that program. Sound fun? There are some very specific 
+instructions and I've gone and captured them for us in Trello.  
 
 Let's walk through the product requirements:
 
-As a user, I should be shown the number of tickets left remaining, so I can understand the importance of buying now. (That makes sense...gotta give them a little bit of FOMO.)
+As a user, I should be shown the number of tickets left remaining, so I can understand the importance of buying now.
 
-As a user, I should have a personalized experience so that I feel welcome by the brand. (Cool, I'll have to get to know what their name is right?)
+As a user, I should have a personalized experience so that I feel welcome by the brand.
 
 As a user, I should have errors reported in a user friendly manner.
 
