@@ -15,6 +15,9 @@ As a user, I should be able to see the list at any time so that I can verify my 
 
 As a user I should be able to state when I'm done so that I can print out the list in totality.
 """
+#import os library
+import os
+
 #create new shopping list
 shopping_list = []
 
@@ -27,12 +30,16 @@ def add_item_to_list(item):
     
 #function to show help menu
 def show_help():
+    clear_screen()
     print("My Shopping List App")
     print("""
 Enter 'DONE' to stop adding items.
 Enter 'HELP' to show the help menu.
 Enter 'PRINT' to print the current list.
 Enter 'REMOVE' to remove an item from the list.
+Enter 'CLEAR' to clear the screen.
+
+...or just add an item to the bottom of the list by tying the item name below.
 """)
 
 
@@ -53,7 +60,11 @@ def remove_item():
     except IndexError:
         print("{} is not a valid item number...returning to previous screen.".format(item_to_remove))
 
-        
+
+#function to clear screen
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+
 #show help screen
 show_help()
 
@@ -61,23 +72,26 @@ show_help()
 while True:
     new_item = input("Enter item to add to list: ")
     
-    if new_item == "DONE":
+    if new_item.upper() == "DONE":
         break
-    elif new_item == 'HELP':
+    elif new_item.upper() == 'HELP':
         show_help()
         continue
-    elif new_item == 'PRINT':
+    elif new_item.upper() == 'PRINT':
         print_list()
         continue
-    elif new_item == 'REMOVE':
+    elif new_item.upper() == 'REMOVE':
         remove_item()
         continue
     elif len(new_item) < 1:
         print("You must enter a valid item to add it to the list.")
         continue
-    
-    #add item to list
-    add_item_to_list(new_item)
+    elif new_item.upper() == "CLEAR":
+        clear_screen()
+        show_help()
+        continue    
+    else:
+        add_item_to_list(new_item)
 
 #print final list on exit
 print()
